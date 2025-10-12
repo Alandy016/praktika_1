@@ -1,0 +1,244 @@
+
+$color-primary: #003e35;
+$color-secondary: #f3f4f6;
+$color-accent: #ffd6af;
+$color-button: #00856f;
+$color-dark: #000;
+$font-main: 'Helvetica Neue', sans-serif;
+
+@font-face {
+    font-family: Oswald;
+    src: url(Fonts/Oswald.ttf);
+}
+
+
+
+span {
+  cursor: pointer;
+}
+
+
+body {
+  font-family: $font-main;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: $color-dark;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.header {
+  background: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e5e5;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Oswald;
+    
+    &--bold {
+      font-weight: normal;
+    }
+  }
+
+  &__search {
+    position: relative;
+
+    &-button {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  &__auth {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__login,
+  &__register {
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__login {
+    background: #fff;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+  }
+
+  &__register {
+    background: $color-primary;
+    color: #fff;
+  }
+}
+
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: Oswald;
+  }
+
+  &__highlight {
+    color: $color-accent;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+
+    &--find {
+      background: $color-accent;
+      color: $color-dark;
+    }
+
+    &--sell {
+      background: $color-button;
+      color: white;
+    }
+  }
+}
+
+
+.categories {
+  padding: 2rem 1rem;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__item {
+    width: 120px;
+    height: 180px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__image {
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 1rem;
+    color: #555;
+    transform: scale(0.09);
+  }
+}
+
+
+.social {
+  padding: 3rem 1rem;
+  text-align: center;
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: Oswald;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  &__icon {
+    color: $color-primary;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+}
+
+
+.footer {
+  background: $color-secondary;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    color: $color-dark;
+    text-decoration: none;
+  }
+
+  &__logo {
+    font-weight: bold;
+
+    &--bold {
+      font-weight: normal;
+    }
+  }
+
+  &__copyright {
+    margin-top: 1rem;
+    color: #666;
+  }
+}
+
+.container {
+  padding: 8%;
+}
+
+.tabs {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}

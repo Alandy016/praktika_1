@@ -4,31 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Session Artist</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="main.css" />
-  
 </head>
 
-<body class="page">
-  <header class="header">
-    <div class="header__container">
-      
-      <div class="header__logo">SESSION <span class="header__logo--bold">artist</span></div>
-      <div class="header__search">
-        <input type="text" class="header__input" placeholder="Search" />
-        <button class="header__search-button"></button>
+<body class="d-flex flex-column min-vh-100 bg-white text-dark">
+
+  <!-- Верх -->
+  <header class="border-bottom py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="fw-bold fs-5 text-uppercase">
+        SESSION <span class="fw-normal">artist</span>
       </div>
-      <div class="header__auth">
-        
-         <button class="header__login" id="modal-open">Login in</button>
 
+      <form class="input-group w-25">
+        <input type="text" class="form-control" placeholder="Search">
+        <button class="btn btn-outline-success" type="button">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
 
-        <button class="header__register">Register</button>
-        <img src="Images/icon.png" width="50px">
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-success" id="modal-open" data-bs-toggle="modal" data-bs-target="#registerModal">Login in</button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+        <img src="Images/icon.png" width="50" alt="User icon">
       </div>
     </div>
   </header>
 
+  
 <section>
   <div
     class="alert alert-success alert-dismissible fade show"
@@ -51,583 +56,421 @@
 </script>
 </section>
 
-<section>
-  <main class="main">
-    <section class="hero">
-      <h1 class="hero__title">Session Artists for your<br><span class="hero__highlight">dream project.</span></h1>
-      <p class="hero__subtitle">Select Category</p>
-      <div class="hero__buttons">
-        <button class="hero__button hero__button--find">Find an artist</button>
-        <button class="hero__button hero__button--sell">Become seller</button>
+  <section class="text-center py-5 bg-light">
+    <div class="container">
+      <h1 class="display-5 fw-bold mb-3">Session Artists for your<br><span class="text-accent">dream project.</span></h1>
+      <p class="lead mb-4">Select Category</p>
+      <div class="d-flex justify-content-center gap-3">
+        <button class="btn btn-accent text-dark px-4 py-2">Find an artist</button>
+        <button class="btn btn-success px-4 py-2">Become seller</button>
       </div>
-    </section>
+    </div>
+  </section>
 
+    <!-- Карусель -->
+  <section class="container my-5">
+  <div class="row align-items-center">
+    <!-- Левый текст -->
+    <div class="col-md-4">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+      </p>
+    </div>
 
-
-<section class="categories">
-      <div class="categories__list">
-        <div class="categories__item"><div class="categories__image"><img src="Images/1 (2).jpg"></div></div>
-        <div class="categories__item"><div class="categories__image"><img src="Images/2.jpg"></div></div>
-        <div class="categories__item"><div class="categories__image"><img src="Images/3.jpg"></div></div>
-        <div class="categories__item"><div class="categories__image"><img src="Images/4 (2).jpg"></div></div>
-        <div class="categories__item"><div class="categories__image"><img src="Images/5.jpg"></div></div>
-        <div class="categories__item"><div class="categories__image"><img src="Images/6 (2).jpg"></div></div>
+    <!-- Карусель справа -->
+    <div class="col-md-6 ms-auto">
+      <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselId" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselId" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Images/slide1.png" class="d-block w-100" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="Images/slide2.png" class="d-block w-100" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="Images/slide3.png" class="d-block w-100" alt="">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
-    </main>
-    </section>
+    </div>
+  </div>
+</section>
 
 
-
-<section class="container">
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
+ <section class="container my-5">
+  <!-- Табы -->
+  <ul class="nav nav-tabs border-0 justify-content-center" id="artistTabs" role="tablist">
     <li class="nav-item" role="presentation">
-      <button
-        class="nav-link"
-        id="profile-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#profile"
-        type="button"
-        role="tab"
-        aria-controls="profile"
-        aria-selected="false"
-      >
-        Profile
-      </button>
-    <li class="nav-item" role="presentation">
-      <button
-        class="nav-link active"
-        id="home-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#home"
-        type="button"
-        role="tab"
-        aria-controls="home"
-        aria-selected="true"
-      >
-        Guitarists
-      </button>
+      <button class="nav-link active" id="guitarists-tab" data-bs-toggle="tab" data-bs-target="#guitarists" type="button" role="tab">Guitarists</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button
-        class="nav-link"
-        id="profile-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#profile"
-        type="button"
-        role="tab"
-        aria-controls="profile"
-        aria-selected="false"
-      >
-        Pianists
-      </button>
+      <button class="nav-link" id="pianists-tab" data-bs-toggle="tab" data-bs-target="#pianists" type="button" role="tab">Pianists</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button
-        class="nav-link"
-        id="messages-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#messages"
-        type="button"
-        role="tab"
-        aria-controls="messages"
-        aria-selected="false"
-      >
-        Vocalist
-      </button>
+      <button class="nav-link" id="drums-tab" data-bs-toggle="tab" data-bs-target="#drums" type="button" role="tab">Drums</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button
-        class="nav-link"
-        id="profile-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#profile"
-        type="button"
-        role="tab"
-        aria-controls="profile"
-        aria-selected="false"
-      >
-        Drums
-      </button>
+      <button class="nav-link" id="vocals-tab" data-bs-toggle="tab" data-bs-target="#vocals" type="button" role="tab">Vocals</button>
+    </li>
   </ul>
+
   
-  <!-- Tab panes -->
+
+  <!-- Табы внутри -->
   <div class="tab-content">
-    <div
-      class="tab-pane active"
-      id="home"
-      role="tabpanel"
-      aria-labelledby="home-tab"
-    >
-       <section class="container-sm">
-      <div class="row">
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Bass Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Electro Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Solo Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Bass Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Electro Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Solo Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-      </div>
-        </section>
-        </div>
-        <div
-          class="tab-pane"
-          id="profile"
-          role="tabpanel"
-          aria-labelledby="profile-tab"
-        >
-          <section class="container-sm">
-            <div class="row">
-              <div class="col-4">
-                <div class="card">
-                  <div class="card-body">
-                  <img
-                    src="Images/pianist.png"
-                    class="img-fluid rounded-top"
-                  />
-                  
-                    <h3 class="card-title">Bass Guitar</h3>
-                    <p class="card-text">Send a message</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="card">
-                  <div class="card-body">
-                  <img
-                    src="Images/pianist.png"
-                    class="img-fluid rounded-top"
-                  />
-                  
-                    <h3 class="card-title">Electro Guitar</h3>
-                    <p class="card-text">Send a message</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="card">
-                  <div class="card-body">
-                  <img
-                    src="Images/pianist.png"
-                    class="img-fluid rounded-top"
-                  />
-                  
-                    <h3 class="card-title">Solo Guitar</h3>
-                    <p class="card-text">Send a message</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <div class="card">
-                  <div class="card-body">
-                  <img
-                    src="Images/pianist.png"
-                    class="img-fluid rounded-top"
-                  />
-                  
-                    <h3 class="card-title">Bass Guitar</h3>
-                    <p class="card-text">Send a message</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="card">
-                  <div class="card-body">
-                  <img
-                    src="Images/pianist.png"
-                    class="img-fluid rounded-top"
-                  />
-                  
-                    <h3 class="card-title">Electro Guitar</h3>
-                    <p class="card-text">Send a message</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="card">
-                  <div class="card-body">
-                  <img
-                    src="Images/pianist.png"
-                    class="img-fluid rounded-top"
-                  />
-                  
-                    <h3 class="card-title">Solo Guitar</h3>
-                    <p class="card-text">Send a message</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div
-          class="tab-pane"
-          id="messages"
-          role="tabpanel"
-          aria-labelledby="messages-tab"
-        ><section class="container-sm">
-      <div class="row">
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Bass Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Electro Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Solo Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Bass Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Electro Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-            <img
-              src="Images/guitar.png"
-              class="img-fluid rounded-top"
-            />
-            
-              <h3 class="card-title">Solo Guitar</h3>
-              <p class="card-text">Send a message</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> 
-        
-    </div>
-  </div>
-  
-</section>
 
+    <!-- Гитара -->
+    <div class="tab-pane fade show active" id="guitarists" role="tabpanel">
+      <h3 class="fw-bold mb-4">Guitarists.</h3>
+      <div class="row g-4">
+        <!-- Карточка -->
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/guitar.png" class="card-img-top" alt="artist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@nickportman</span>
+                <span class="text-warning fw-semibold">5.0 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $5</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<section class="container">
-<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-  <ol class="carousel-indicators">
-    <li
-      data-bs-target="#carouselId"
-      data-bs-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="First slide"
-    ></li>
-    <li
-      data-bs-target="#carouselId"
-      data-bs-slide-to="1"
-      aria-label="Second slide"
-    ></li>
-    <li
-      data-bs-target="#carouselId"
-      data-bs-slide-to="2"
-      aria-label="Third slide"
-    ></li>
-  </ol>
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <img
-        src="Images/slide1.png"
-        class="w-100 d-block"
-        alt="First slide"
-      />
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/guitar.png" class="card-img-top" alt="artist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@nickportman</span>
+                <span class="text-warning fw-semibold">5.0 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $5</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/guitar.png" class="card-img-top" alt="artist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@nickportman</span>
+                <span class="text-warning fw-semibold">5.0 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $5</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/guitar.png" class="card-img-top" alt="artist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@nickportman</span>
+                <span class="text-warning fw-semibold">5.0 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $5</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/guitar.png" class="card-img-top" alt="artist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@nickportman</span>
+                <span class="text-warning fw-semibold">5.0 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $5</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/guitar.png" class="card-img-top" alt="artist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@nickportman</span>
+                <span class="text-warning fw-semibold">5.0 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $5</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <nav class="mt-4 d-flex justify-content-center">
+        <ul class="pagination">
+          <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="carousel-item">
-      <img
-        src="Images/slide2.png"
-        class="w-100 d-block"
-        alt="Second slide"
-      />
+
+    <!-- Пиано -->
+    <div class="tab-pane fade" id="pianists" role="tabpanel">
+      <h3 class="fw-bold mb-4">Pianists.</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/pianist.png" class="card-img-top" alt="pianist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@janedoe</span>
+                <span class="text-warning fw-semibold">4.9 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Professional pianist with 10+ years of studio experience."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $10</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/pianist.png" class="card-img-top" alt="pianist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@janedoe</span>
+                <span class="text-warning fw-semibold">4.9 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Professional pianist with 10+ years of studio experience."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $10</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/pianist.png" class="card-img-top" alt="pianist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@janedoe</span>
+                <span class="text-warning fw-semibold">4.9 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Professional pianist with 10+ years of studio experience."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $10</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/pianist.png" class="card-img-top" alt="pianist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@janedoe</span>
+                <span class="text-warning fw-semibold">4.9 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Professional pianist with 10+ years of studio experience."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $10</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img
-        src="Images/slide3.png"
-        class="w-100 d-block"
-        alt="Third slide"
-      />
+
+    <!-- Барабаны -->
+    <div class="tab-pane fade" id="drums" role="tabpanel">
+      <h3 class="fw-bold mb-4">Drummers.</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/pianist.png" class="card-img-top" alt="drummer">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@drumhero</span>
+                <span class="text-warning fw-semibold">5.0 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Session drummer for rock and jazz bands worldwide."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $8</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselId"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-bs-target="#carouselId"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+
+    <!-- Вокал -->
+    <div class="tab-pane fade" id="vocals" role="tabpanel">
+      <h3 class="fw-bold mb-4">Vocalists.</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card artist-card shadow-sm border-0">
+            <img src="Images/pianist.png" class="card-img-top" alt="vocalist">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold">@voicequeen</span>
+                <span class="text-warning fw-semibold">5.0 ★</span>
+              </div>
+              <p class="text-muted small mb-3">
+                "Professional studio vocalist with experience in pop and R&B."
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-danger small">starting at $12</span>
+                <button class="btn btn-green btn-sm">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
 
 
 
-<section class="hero">
-  <div class="container">
-    <h1 class="hero__title">Q&A</h1>
+  <!-- Акоордеон -->
+  <section class="container py-5">
+    <h2 class="text-center fw-bold mb-4">Q&A</h2>
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            Accordion Item #1
-          </button>
+        <h2 class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Accordion Item #1</button>
         </h2>
-        <div
-          id="collapseOne"
-          class="accordion-collapse collapse show"
-          aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            This is the first item's accordion body.
-          </div>
+        <div id="collapseOne" class="accordion-collapse collapse show">
+          <div class="accordion-body">This is the first item's accordion body.</div>
         </div>
       </div>
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            Accordion Item #2
-          </button>
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Accordion Item #2</button>
         </h2>
-        <div
-          id="collapseOne"
-          class="accordion-collapse collapse show"
-          aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            This is the second item's accordion body.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            Accordion Item #3
-          </button>
-        </h2>
-        <div
-          id="collapseOne"
-          class="accordion-collapse collapse show"
-          aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            This is the third item's accordion body.
-          </div>
-        </div>
-      </div><div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            Accordion Item #4
-          </button>
-        </h2>
-        <div
-          id="collapseOne"
-          class="accordion-collapse collapse show"
-          aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            This is the forth item's accordion body.
-          </div>
+        <div id="collapseTwo" class="accordion-collapse collapse">
+          <div class="accordion-body">This is the second item's accordion body.</div>
         </div>
       </div>
     </div>
-    </div>
-  
-</section>
+  </section>
 
-  <footer class="footer">
-    
-    <section class="social">
-      <h2 class="social__title">Social.</h2>
-      <div class="social__icons">
-        <a href="#" class="social__icon">Instagram</a>
-        <a href="#" class="social__icon">Facebook</a>
-        <a href="#" class="social__icon">Twitter</a>
+   <!-- окно -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-3">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold w-100 text-center" id="registerModalLabel">Register</h5>
+          <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body px-4 pb-4">
+          <form>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Choose a Username" required>
+            </div>
+            <div class="mb-4">
+              <input type="password" class="form-control" placeholder="Choose a Password" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success btn-lg">Join</button>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="footer__nav">
-      <a href="#" class="footer__link">Mobile App</a>
-      <a href="#" class="footer__link">Community</a>
-      <a href="#" class="footer__link">Company</a>
-      <a href="#" class="footer__link">Help desk</a>
-      <a href="#" class="footer__link">Blog</a>
-      <a href="#" class="footer__link">Resources</a>
     </div>
-    </section>
- 
+  </div>
 
-    <div class="footer__logo">SESSION <span class="footer__logo--bold">artist</span></div>
-    <div class="footer__copyright">
-      © 2022 Session artist All rights reserved
+
+  <!-- Футер -->
+  <footer class="bg-light text-center py-5 mt-auto border-top">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Social.</h2>
+      <div class="d-flex justify-content-center gap-3 mb-3">
+        <a href="#" class="link-primary text-decoration-none">Instagram</a>
+        <a href="#" class="link-primary text-decoration-none">Facebook</a>
+        <a href="#" class="link-primary text-decoration-none">Twitter</a>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+        <a href="#" class="text-dark text-decoration-none">Mobile App</a>
+        <a href="#" class="text-dark text-decoration-none">Community</a>
+        <a href="#" class="text-dark text-decoration-none">Company</a>
+        <a href="#" class="text-dark text-decoration-none">Help desk</a>
+        <a href="#" class="text-dark text-decoration-none">Blog</a>
+        <a href="#" class="text-dark text-decoration-none">Resources</a>
+      </div>
+
+      <div class="fw-bold">SESSION <span class="fw-normal">artist</span></div>
+      <div class="text-muted small mt-2">© 2022 Session artist. All rights reserved</div>
     </div>
   </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
